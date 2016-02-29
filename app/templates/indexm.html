@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='mobile.css') }}">
+    <script type="text/javascript" src="../static/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("h1").css("display", "none");
+            $("h1").fadeIn(2000);
+        });
+    </script>
+</head>
+
+<body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <div id="immobile">
+        <h1>Ankieta</h1>
+
+    </div>
+    <div id="mobile">
+        <form action="/index" method="post" name="survey">
+            <p>
+                Witaj Przybyszu! Fakt, że pojawiłeś się na tej stornie niezmiernie nas satysfakcjonuje. Liczymy na subiektywne odpowiedzi i chwilę poświęconą na uszczęśliwienie biednych studentów.
+           </p>
+            <p3>
+                {{form.submit}}
+
+            </p3>
+        </form>
+    </div>
+
+</body>
+
+</html>

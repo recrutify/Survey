@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='bootstrap.min.css') }}" >
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='mobile.css') }}" >
+   
+</head>
+
+<body>
+    <div id="immobile">
+        <h1>Ankieta</h1>
+      
+    </div>
+
+
+    <div id="mobile">
+
+<form action="/basicInfo" method="post" name="surveyb">
+   <p>
+     Informacje podstawowe: 
+   </p>
+    <p1>
+        {{ form.profession }}
+        {{ form.age }}
+    </p1>
+    <p3>
+        {{ form.submit }}
+
+    </p3>
+    </form>
+    </div>
+
+</body>
+
+</html>

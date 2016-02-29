@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main.css') }}">
+
+
+</head>
+
+<body>
+    <div id="immobile">
+        <h1>Ankieta</h1>
+        {{ info }}
+
+    </div>
+
+    <div id="mobile">
+        <form action="/question2" method="post" name="surveyq">
+            <p1>
+                {{ question }}
+            </p1>
+
+            <p3>
+                {{ form.yes}} {{form.no}}
+            </p3>
+
+        </form>
+    </div>
+</body>
+
+</html>
